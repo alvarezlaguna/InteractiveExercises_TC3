@@ -1,0 +1,11 @@
+name: ktic-interactive
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.11
+  - jupyterlab
+  - numpy
+  - scipy
+  - matplotlib
+  - ipywidgets
+  - ipympl

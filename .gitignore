@@ -1,0 +1,33 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Conda
+.env
+.venv
+env/
+venv/
+ENV/
+*.egg-info/
+.cache/
+
+# IDEs
+.vscode/
+.idea/
+
+# Misc
+*.log
+*.swp
+*.swo
+*~
