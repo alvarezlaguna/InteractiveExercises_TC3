@@ -11,7 +11,7 @@ self-contained; no coding is required to run the interactive figures.
 | Notebook | Problem | What you can explore |
 |----------|---------|---------------------|
 | [`notebooks/01_drifting_maxwellian.ipynb`](notebooks/01_drifting_maxwellian.ipynb) | The drifting Maxwellian | Two-term expansion, speed / energy / probability distributions, species and temperature dependence |
-| [`notebooks/02_binet_rutherford.ipynb`](notebooks/02_binet_rutherford.ipynb) | Binet's equation and Rutherford's formula | Collision trajectories, deflection angle χ(b), effective potential, hard sphere vs inverse power law |
+| [`notebooks/02_binet_rutherford.ipynb`](notebooks/02_binet_rutherford.ipynb) | Binet's equation and Rutherford's formula | Collision trajectories, deflection angle χ(b) with a velocity family, fixed-b speed scan χ(g), effective potential, hard sphere vs inverse power law, argon electron and ion cross sections |
 
 More notebooks will be added following the same structure.
 
@@ -31,8 +31,15 @@ log-linear behaviour of $f_p$.
 Reduce a binary collision to the relative motion in a central potential, then explore
 how the trajectory and the deflection angle depend on the impact parameter, the
 incoming speed and the interaction potential. The potential menu offers a hard sphere
-or an inverse-power-law potential $U=k/r^n$, with $n=1$ corresponding to Coulomb. It
-also covers the effective potential and the turning point $r_0$.
+or an inverse-power-law potential $U=k/r^n$, with $n=1$ corresponding to Coulomb. The
+sign of the interaction is fixed by the pair: like charges repel, opposite charges
+attract, and neutral pairs have no Coulomb force at $n=1$ (the hard-sphere and custom
+power-law interactions are repulsive). The notebook also covers the effective
+potential, the turning point $r_0$, and a fixed-impact-parameter scan showing why
+$\chi$ changes with $g$ even when the normalized curve $\chi(b/\ell)$ does not. The
+final content section loads the tabulated argon cross sections in `crossSections/` and
+compares electron–argon elastic, excitation and ionization channels with ion–argon
+isotropic and backscattering (charge-exchange) cross sections.
 
 <p align="center">
   <img src="notebooks/figures/binet_geometry.png" width="440">
@@ -47,6 +54,8 @@ closest approach r₀, swept angle Θ and asymptotic deflection χ.</em></p>
 .
 ├── environment.yml
 ├── README.md
+├── crossSections/
+│   └── Ar_*.txt
 └── notebooks/
     ├── 01_drifting_maxwellian.ipynb
     ├── 02_binet_rutherford.ipynb
